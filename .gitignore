@@ -13,7 +13,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-
+.idea/
 # External tool builders
 .externalToolBuilders/
 
@@ -92,4 +92,4 @@ local.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# End of https://www.toptal.com/developers/gitignore/api/eclipse,java
+# End of https://www.toptal.com/developers/gitignore/api/eclipsgit
