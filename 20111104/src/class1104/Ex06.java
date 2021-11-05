@@ -1,3 +1,4 @@
+package class1104;
 
 public class Ex06 {
 

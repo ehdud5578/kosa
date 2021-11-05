@@ -1,3 +1,5 @@
+package class1104;
+
 public class Ex09 {
     public static void main(String[] args) {
         System.out.println(!!!!!!false);
