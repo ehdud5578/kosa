@@ -17,7 +17,7 @@ local.properties
 .DS_Store
 .classpath
 .project
-.imi
+.iml
 # External tool builders
 .externalToolBuilders/
 
