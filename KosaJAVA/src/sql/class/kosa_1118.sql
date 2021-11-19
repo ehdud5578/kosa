@@ -162,34 +162,65 @@ create table employees
 );
 
 alter table employees
-add constraint emp_empid_pk primary key (employee_id);
+    add constraint emp_empid_pk primary key (employee_id);
 
 drop table JOB_HISTORY;
-create table JOB_HISTORY(
-    employee_id number(6),
-    start_date date ,
-    end_date date not null ,
-    job_id varchar2(10) not null ,
+create table JOB_HISTORY
+(
+    employee_id   number(6),
+    start_date    date,
+    end_date      date         not null,
+    job_id        varchar2(10) not null,
     department_id number(4),
-    constraint job_history_pk primary key(employee_id,start_date)
+    constraint job_history_pk primary key (employee_id, start_date)
 );
 
 drop table jobs;
-create table JOBS(
-    job_id varchar2(10) constraint job_jobs_pk primary key ,
-    job_title varchar2(35),
+create table JOBS
+(
+    job_id     varchar2(10)
+        constraint job_jobs_pk primary key,
+    job_title  varchar2(35),
     Min_salary number(6),
     max_salary number(6)
 );
 
 alter table JOB_HISTORY
-add constraint job_jobid_fk foreign key (job_id) references JOBS(job_id);
+    add constraint job_jobid_fk foreign key (job_id) references JOBS (job_id);
 drop table departments;
-create table departments(
-    department_id number(4) primary key ,
+create table departments
+(
+    department_id   number(4) primary key,
     department_name varchar2(30),
-    manager_id number(6),
-    location_id number(4)
+    manager_id      number(6),
+    location_id     number(4)
 );
 
-select * from departments;
+select *
+from departments;
+
+select *
+from employees
+where job_id like '%MAN%';
+
+select *
+from employees
+where department_id = '80'
+order by hire_date;
+
+select employee_id, first_name, salary as sal, department_id
+from employees
+order by 3 desc;
+
+select department_id, job_id
+from employees
+order by department_id, job_id;
+
+select department_id, job_id, salary
+from employees
+order by department_id, job_id desc, salary desc;
+
+select *
+from employees
+order by department_id, job_id desc, salary desc, hire_date ;
+
