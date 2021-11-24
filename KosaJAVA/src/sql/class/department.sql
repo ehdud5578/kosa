@@ -190,3 +190,5 @@ INSERT INTO departments VALUES
         , NULL
         , 1700
         );
+
+commit ;
