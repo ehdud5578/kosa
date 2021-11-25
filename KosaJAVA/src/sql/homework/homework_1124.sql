@@ -13,8 +13,6 @@ select case substr(JOB_ID, 4, 2)
            else 'business' end job_id
 from EMPLOYEES;
 
-select *
-from DEPARTMENTS;
 
 -- 3. 직무에 REP가 포함되어 있는 사원들의 평균 급여와 최소급여
 --       최대급여 급여의 합계를 구하시오.
@@ -70,9 +68,9 @@ where LAST_NAME like 'King';
 --       지역명을 출력하는데 지역코드가 1400인 지역만 출력
 -- T-SQL, ANSI JOIN
 
-
 -- 14. 직원의 정보를 출력할 때 부서정보와 그 부서의 주소를
 --       출력하시오.
+
 -- 15. 직원정보를 출력할 때 그 직원의 부서정보와 그 직원
 --       직무내용을 출력하시오.
 --       부서번호, 부서명, 직무번호, 직무내용
