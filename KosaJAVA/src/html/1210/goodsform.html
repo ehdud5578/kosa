@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>goodsform</title>
+</head>
+<body>
+<form action="#" name="goodsForm">
+    <table border="1">
+        <caption>제품 등록</caption>
+        <tr>
+            <th>제품 번호</th>
+            <td><input type="text" name="goodsNum" required></td>
+        </tr>
+        <tr>
+            <th>제품 명</th>
+            <td><input type="text" name="goodsName" required></td>
+        </tr>
+        <tr>
+            <th>제품 가격</th>
+            <td><input type="number" name="goodsPrice" min="5000" max="150000" step="1000" value="5000" required>원</td>
+        </tr>
+        <tr>
+            <th>제품 색상</th>
+            <td><input type="color" name="goodsColor" ></td>
+        </tr>
+        <tr>
+            <th>제품 수량</th>
+            <td><input type="number" name="goodsCnt" min="1" max="100" step="1" value="1" required>개</td>
+        </tr>
+        <tr>
+            <th>월</th>
+            <td><input type="month" name="month" >월</td>
+        </tr>
+        <tr>
+            <th colspan="2"><input type="submit" value="submit"></th>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
