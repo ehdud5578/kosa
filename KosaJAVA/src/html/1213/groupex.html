@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        #wrap {
+            width: 650px;
+            margin: auto;
+            background-color: yellow;
+        }
+
+        #skipnav, .hidden {
+            display: none;
+        }
+
+        #gnb {
+            float: right;
+        }
+
+        #header h1 {
+            float: left;
+        }
+
+        #gnbmenu li {
+            list-style: none;
+            float: left;
+            padding-left: 20px;
+        }
+
+        #contentwrap {
+            height: 80px;
+        }
+
+        #left {
+            width: 216px;
+            float: left;
+            border-right: 1px solid #ccc;
+        }
+
+        #center {
+            width: 216px;
+            float: left;
+            border-right: 1px solid #ccc;
+        }
+
+        #right {
+            width: 216px;
+            float: right;
+        }
+
+        hr {
+            clear: both;
+        }
+
+        body{
+            font-size: 12px;
+        }
+    </style>
+    <title>groupex</title>
+</head>
+<body>
+<div id="wrap">
+    <div id="skipnav">
+        <a href="#contentwrap">컨텐츠 바로가기</a>
+    </div>
+    <div id="header">
+        <h1>RHEE</h1>
+        <h2 class="hidden">메인메뉴</h2>
+        <div id="gnb">
+            <ul id="gnbmenu">
+                <li>RHEE</li>
+                <li>도서소개</li>
+                <li>자료실</li>
+            </ul>
+        </div>
+    </div>
+    <hr/>
+    <div id="contentwrap">
+        <div id="left">
+            <h2>왼쪽 컨텐츠</h2>
+            <p>내용</p>
+        </div>
+        <div id="center">
+            <h2>중앙 컨텐츠</h2>
+            <p>내용</p>
+        </div>
+        <div id="right">
+            <h2>오른쪽 컨텐츠</h2>
+            <p>내용</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

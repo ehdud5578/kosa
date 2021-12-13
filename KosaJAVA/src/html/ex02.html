@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form method="get" action="#">
+    <input type="hidden" name="hidden" value="100">
+    <fieldset>
+        <legend>태그 연습</legend>
+        <table border="1" width="600">
+            <caption>input tag</caption>
+            <colgroup>
+                <col width="30%">
+                <col width="70%">
+            </colgroup>
+            <tfoot>
+            <tr>
+                <td colspan="2"><input type="submit" value="전송"><input type="reset" value="취소"></td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <th>고객번호</th>
+                <td><input type="text" name="userNum" value="12345" readonly></td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td><input type="text" size="30" required></td>
+            </tr>
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" size="30" required></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" size="30" required minlength="8" maxlength="13"></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td><input type="password" size="30" required minlength="8" maxlength="13"></td>
+            </tr>
+            <tr>
+                <th>연락처</th>
+                <td><input type="text" name="userPh" placeholder="- 없이 숫자만" required></td>
+            </tr>
+            <tr>
+                <th>자기소개</th>
+                <td>
+                    <label>
+<textarea rows="6" cols="50" required>
+</textarea>
+                    </label>
+                </td>
+
+            </tr>
+            <tr>
+                <th>관심분야</th>
+                <td><input type="radio" name="emailCk" value="y" checked>Y
+                    <input type="radio" name="emailCk" value="N" checked>N
+                </td>
+            </tr>
+            <tr>
+                <th>관심분야</th>
+                <td>
+                    <input type="checkbox" value="HTML" name="html">HTML
+                    <input type="checkbox" value="CSS" name="CSS">CSS
+                    <input type="checkbox" value="JAVA" name="JAVA">JAVA
+                </td>
+            </tr>
+            <tr>
+                <th>지역</th>
+                <td>
+                    <select name="location">
+                        <optgroup label="관악구">
+                            <option>봉천동</option>
+                            <option>신림동</option>
+                            <option>남현동</option>
+                        </optgroup>
+                        <optgroup label="동대문구">
+                            <option>전농동</option>
+                            <option>신림동</option>
+                            <option>남현동</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>과목선택</th>
+                <td>
+                    <select name="subject" multiple size="3">
+                        <option>html</option>
+                        <option selected>css</option>
+                        <option selected>java</option>
+                        <option>javascript</option>
+                        <option>jsp</option>
+                        <option>database</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>홈페이지</th>
+                <td><input type="url" name="userUrl"></td>
+            </tr>
+            <tr>
+                <th>숫자</th>
+                <td><input type="number" min="1" max="100" step="2" value="1"></td>
+            </tr>
+            <tr>
+                <th>월</th>
+                <td><input type="month" value="2021-10"></td>
+            </tr>
+            <tr>
+                <th>날짜시간</th>
+                <td><input type="datetime-local" name="ldatetime" value=""></td>
+            </tr>
+            <tr>
+                <th>날짜시간</th>
+                <td><input type="datetime" value=""></td>
+            </tr>
+            <tr>
+                <th>week</th>
+                <td><input type="week" name="week" value="2022-W02"></td>
+            </tr>
+            <tr>
+                <th>time</th>
+                <td><input type="time" name="time" value="12:30:38"></td>
+            </tr>
+            <tr>
+                <th>color</th>
+                <td><input type="color" value="#000000"> </td>
+            </tr>
+            <tr>
+                <th>datalist</th>
+                <td><input type="text" list="list">
+                <datalist id="list">
+                    <option>html</option>
+                    <option value="css"></option>
+                    <option value="java"></option>
+                </datalist></td>
+            </tr>
+            <tr>
+                <th>search</th>
+                <td><input type="search" name="search"> </td>
+<!--                search 는 x 표시 생겨서 검색어를 삭제할 수 있다.-->
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .ctxt {
+            color: blue;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul > li {
+            color: blue;
+        }
+
+
+        h3 + p {
+            color: gray;
+        }
+
+        h3 + p > span {
+            color: yellow;
+        }
+
+        h4[class] {
+            color: red;
+        }
+
+        img[alt] {
+            width: 50px;
+            height: 50px;
+        }
+
+        *[title] {
+            width: 100px;
+            height: 100px;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:focus {
+            color: red;
+        }
+
+        .box > p:first-letter {
+            font-size: 150%
+        }
+
+        .box > p {
+            border-top: solid 1px #e5e5e5
+        }
+
+        .box > p:first-child {
+            border-top: none;
+        }
+
+        .box:first-line {
+            color: red;
+        }
+
+        .box > p:last-child {
+            color: blue;
+        }
+
+        .box:after {
+            content: "텍스트를 작성";
+            color: red;
+        }
+
+        .box:before {
+            content: "텍스트를 작성";
+            color: red;
+        }
+        p.more{
+            color: black;
+        }
+    </style>
+    <title>선택자</title>
+</head>
+<body>
+<h1>선택자</h1>
+<h2>class 선택자</h2>
+<p class="ctxt"> css</p>
+<ul>
+    <li>7월 여행지</li>
+    <li>8월 여행지</li>
+</ul>
+<ol>
+    <li>9월 여행지</li>
+    <li>10월 여행지</li>
+</ol>
+<h2>인접 선택자</h2>
+<h3>엑스포 안내</h3>
+<p>책자를 배부하고 있습니다.</p>
+<p>안내 데스크를 활용해 주세요.</p>
+<h3>건강해지는 차 </h3>
+<p>머리와 피부에 좋은 차는 어떤 것들일까.<span>차종류</span>에 대해서 알아보자.</p>
+<h2>속성선택자</h2>
+<h4 class="logo">서울특별시</h4>
+<p>주소록을 작성합니다.</p>
+<h4>경기도</h4>
+<p>전화번호부를 작성합니다.</p>
+<img src="../1210/images/house.jpg" alt="house">
+<img src="../1210/images/house.jpg" title="house">
+<img src="../1210/images/house.jpg">
+<h2>가상 클래스 선택자</h2>
+<ul>
+    <li><a href="https://www.naver.com">COMPANY</a></li>
+    <li><a href="#">PRODUCT</a></li>
+    <li><a href="#">SERVICE</a></li>
+</ul>
+<h2>수도 클래스 선택자</h2>
+<div class="box">
+    <p>COMPANY</p>
+    <p>PRODUCT</p>
+    <p>SERVICE</p>
+</div>
+<!--하위 선택자, 자손 선택자-->
+<H2>하위 선택자</H2>
+<style>
+    ol p{color:blue;}
+    ol li{color:green;}
+</style>
+<ol>
+    <li>menu1</li>
+    <li><p>menu2</p></li>
+    <li>menu3</li>
+</ol>
+<h2> 종속 선택자</h2>
+<p class="more"><a href="#">더보기</a></p>
+<ul class="more">
+    <li>menu1</li>
+    <li><p>menu2</p></li>
+    <li>menu3</li>
+</ul>
+<style>
+    .htag ,.ptag ,.ptag2{
+        color: slategrey;
+    }
+</style>
+<h1 class="htag"> 웹 표준 퍼블리싱</h1>
+<p class="ptag">웹디자인의 한 분야로 원래 용어는 웹 콘텐츠 UI 디자인이다</p>
+<p class="ptag2">안녕하세요 박도영입니다.</p>
+</body>
+</html>
