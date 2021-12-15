@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .table1 {
+            border: 1px solid red;
+            border-collapse: separate;
+            border-spacing: 30px;
+            empty-cells: hide;
+        }
+
+        .table1 td {
+            border: 1px dotted aqua;
+
+        }
+
+        #length {
+            width: 150px;
+            table-layout: auto;
+            word-break: break-all;
+            height: auto;
+        }
+
+        .v-align {
+            border: 1px solid #ccc;
+            width: 300px;
+        }
+
+        .v-align td {
+            height: 150px;
+            border: 1px solid #ccc;
+        }
+
+        #td1 {
+            vertical-align: top;
+            text-align: left;
+        }
+
+        #td2 {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #td3 {
+            vertical-align: bottom;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<table class="table1" border="1">
+    <caption>프로축구 경기 일정</caption>
+    <tr>
+        <td>울산</td>
+        <td>울산 vs 인천</td>
+        <td>tv중계</td>
+    </tr>
+    <tr>
+        <td>부산</td>
+        <td>부산 vs 대전</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>서울</td>
+        <td>서울 vs 강원</td>
+        <td></td>
+    </tr>
+</table>
+<table id="length" border="1">
+    <caption>프로축구 경기 일정</caption>
+    <tr>
+        <td>울산울산울산울산울산울산울산울산울산울산울산울산</td>
+        <td>vsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvsvs</td>
+    </tr>
+</table>
+<table>
+    <tr width="150px" height="150px">
+        <td align="center" valign="top">asdfasdf</td>
+        <td>long description</td>
+    </tr>
+</table>
+<table class="v-align">
+    <tr>
+        <td id="td1">asdf</td>
+        <td id="td2">fdaa</td>
+        <td id="td3">qwer</td>
+    </tr>
+</table>
+</body>
+</html>
