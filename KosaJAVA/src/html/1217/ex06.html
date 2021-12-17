@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.write("<h3>생성자</h3>");
+        function ComFactory(cpuInfo, ramInfo, hddInfo) {
+            this.cpu = cpuInfo;
+            this.ram = ramInfo;
+            this.hdd = hddInfo;
+            this.totInfo = function () {
+                document.write("cpu는" + this.cpu);
+            }
+        }
+        var com = new ComFactory("2.8", "8G", "2T");
+        document.write(com.cpu + "<br/>");
+        document.write(com.ram + "<br/>");
+        document.write(com.hdd + "<br/>");
+        com.totInfo();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

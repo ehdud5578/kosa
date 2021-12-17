@@ -11,13 +11,19 @@
 #logo{
     position: absolute;
     top: 30%;
-    left: 50%;
+    left: 43%;
     color: white;
+}
+#content {
+    color:gray;
 }
 a{
     text-decoration: none;
 }
-#logo a{
+#sidebar a{
+    color:gray;
+}
+a{
     color:white;
 }
 #menu{
@@ -129,6 +135,32 @@ div p{
     margin: 1%;
     float: left;
 }
-#copyright{
+#copyright {
     clear: both;
+}
+.style1 li a{
+    color: white;
+    text-decoration: underline;
+}
+.style1 li {
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.title{
+    color: white;
+    margin-top: 15px;
+    font-size: small;
+    text-transform: uppercase;
+}
+#copyright a{
+    color: blue;
+}
+.byline{
+    color: gray;
+}
+.icon{
+    text-transform: uppercase;
+    padding:5px;
+    letter-spacing: 3px;
 }

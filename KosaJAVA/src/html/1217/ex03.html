@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="greet()">alert button</button>
+<br/>
+<a href="javascript:pregallery()"><img src="../images/left_btn.png"></a>
+<img src="../images/img1.jpg" id="gallery">
+<a href="javascript:nextgallery()"><img src="../images/right_btn.png"></a>
+<button onclick="greet1('aaaa');">button1</button>
+<button onclick="greet1('bbbb');">button2</button>
+<span id="ctxt">1111</span>
+<input id="ctxt1" type="text">
+</body>
+</html>
+<script>function greet1(text) {
+    alert(text);
+}
+
+document.write("<h3>함수</h3>");
+
+function greet() {
+    alert("안녕하세요");
+}
+
+var num = 1;
+
+function nextgallery() {
+    num++;
+    if (num > 7) num = 1;
+    document.getElementById("gallery").src = "../images/img" + num + ".jpg";
+}
+
+function pregallery() {
+    num--;
+    if (num < 1) num = 7;
+    document.getElementById("gallery").src = "../images/img" + num + ".jpg";
+}
+var num1 = 10;
+function theFnc(num2){
+    var sum = num1 + num2;
+    return sum;
+}
+var result = theFnc(40);
+document.write(result + "<br/>");
+
+document.getElementById("ctxt1").innerHTML = result;
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function popup() {
+            window.open("popup.html","popName","width=300px, height = 500px, " +
+                "left = 50, top = 100, toolbar=yes,scrollbar=no,location=no");
+        }
+        var myAgent=navigator.userAgent.toLowerCase();
+        var mobile=["iphone","ipad","android","blackberry","window ce","nokia","webos","opera mini","sonyericsson"];
+        for(var i = 0;i<mobile.length;i++){
+            if (myAgent.indexOf(mobile[i]) >= 0){
+                document.write("mobile version 입니다.");
+                location.href="http:m.naver.com";
+                break;
+            }else {
+
+            }
+        }
+    </script>
+</head>
+<body>
+<button onclick="popup()">
+    popup
+</button>
+</body>
+</html>
