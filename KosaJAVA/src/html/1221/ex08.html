@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript">
+        function valCk() {
+            if ($("#userName").val() === "") {
+                alert("이름을 입력해주세요");
+                $("#userName").focus();
+                return false;
+            }
+            if ($("#userID").val() === "") {
+                alert("아이디을 입력해주세요");
+                $("#userID").focus();
+                return false;
+            }
+            if ($("#userPw").val() === "") {
+                alert("비밀번호을 입력해주세요");
+                $("#userPw").focus();
+                return false;
+            }
+            if ($("#userPwCon").val() === "") {
+                alert("비밀번호 확인을 입력해주세요");
+                $("#userPwCon").focus();
+                return false;
+            }
+            if ($("#userPw").val() !== $("#userPwCon").val()) {
+                alert("비밀번호가 다릅니다.");
+                $("#userPw").val === "";
+                $("#userPwCon").val === "";
+                $("#userPw").focus();
+                return false;
+            }
+            if(!$(":radio[name='gender']").is(":checked")){
+                alert("성별을 선택해주세요 ");
+                $(":radio[name='gender']:input[value='F']").prop("checked",true);
+                return false;
+            }
+            if($("#userEmail").val()===""){
+                alert("이메일을 입력해주세요");
+                $("#userEmail").focus();
+                return false;
+            }
+            if($("#userPhone").val()===""){
+                alert("전화번호를 입력해주세요");
+                $("#userPhone").focus();
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="#" method="get" name="form" onsubmit="valCk()">
+    <table>
+        <tr>
+        <tr>
+            <th>*이름</th>
+            <td><input type="text" id="userName" name="userName"></td>
+        </tr>
+        <th>*아이디</th>
+        <td><input type="text" id="userId" name="userId"></td>
+        </tr>
+        <tr>
+            <th>*비밀번호</th>
+            <td><input type="password" id="userPw" name="userPw"></td>
+        </tr>
+        <tr>
+            <th>*비밀번호 확인</th>
+            <td><input type="password" id="userPwCon" name="userPwCon"></td>
+        </tr>
+        <tr>
+            <th>성별</th>
+            <td><input type="radio" id="male" name="gender" value="F">남자
+                <input type="radio" id="female" name="gender" value="ㅡ">여자
+            </td>
+        </tr>
+        <tr>
+            <th>*이메일</th>
+            <td><input type="email" id="userEmail" name="userEmail"></td>
+        </tr>
+        <tr>
+            <th>*연락처</th>
+            <td><input type="text" id="userPhone" name="userPhone"></td>
+        </tr>
+        <tr>
+            <th>전송</th>
+            <td><input type="submit" id="submit" name="submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

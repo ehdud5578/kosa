@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function (){
+                $("span").html($("h1").html());
+                // 값이 없을때는 넣고, 있을때는 변경
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>안녕하세요.</h1>
+<span>ㅁㄴㅇㄹ</span><button type="button" id="btn">button1</button>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script>
+        function valCk() {
+            if (document.getElementById("userName").value == ""){
+                alert("이름을 입력해 주세요.");
+                document.getElementById("username").focus();
+                return false;
+            }
+            if (document.getElementById("userId").value == ""){
+                alert("아이디를 입력해 주세요.");
+                document.getElementById("userId").focus();
+                return false;
+            }
+            if (document.getElementById("userPw").value == ""){
+                alert("비밀번호를 입력해 주세요.");
+                document.getElementById("userPw").focus();
+                return false;
+            }
+            if (document.getElementById("userPw").value !== document.getElementById("userPwCon").value){
+                alert("비밀번호가 일치하지 않습니다.");
+                document.getElementById("userPw").value = "";
+                document.getElementById("userPwCon").value = "";
+                document.getElementById("userPw").focus();
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="#" method="get" name="form" onsubmit="valCk()">
+    <table>
+        <tr>
+        <tr>
+            <th>*이름</th>
+            <td><input type="text" id="userName" name="userName"></td>
+        </tr>
+        <th>*아이디</th>
+        <td><input type="text" id="userId" name="userId"></td>
+        </tr>
+        <tr>
+            <th>*비밀번호</th>
+            <td><input type="password" id="userPw" name="userPw"></td>
+        </tr>
+        <tr>
+            <th>*비밀번호 확인</th>
+            <td><input type="password" id="userPwCon" name="userPwCon"></td>
+        </tr>
+        <tr>
+            <th>*이메일</th>
+            <td><input type="text" id="userEmail" name="userEmail"></td>
+        </tr>
+        <tr>
+            <th>*연락처</th>
+            <td><input type="text" id="userPhone" name="userPhone"></td>
+        </tr>
+        <tr>
+            <th>전송</th>
+            <td><input type="submit" id="submit" name="submit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").toggle(
+                function () {
+                    $(this).next().css("background-color", "red");
+                }, function () {
+                    $(this).next().css("background-color", "orange");
+                }, function () {
+                    $(this).next().css("background-color", "yellow");
+                }, function () {
+                    $(this).next().css("background-color", "green");
+                });
+
+            $("#btn2").hover(function () {
+                $(this).prev().css("color", "blue");
+            }, function () {
+                $(this).prev().css("color", "black");
+            });
+            $(".list1").css("display","none");
+            $("#listWrap").hover(function () {
+                $(".list1").css("display","block");
+            },function () {
+                $(".list1").css("display","none");
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <button type="button" id="btn1">button1</button>
+    <p id="textZone">
+        asdf adsf asdf asdf adsf asdfasdf adsf asdfasdf adsf asdfasdf adsf asdf
+    </p>
+    <button type="button" id="btn2">button2</button>
+    <div id="listWrap">
+        <h3>관련 사이트</h3>
+        <ul class="list1">
+            <li><a href="#">list1</a></li>
+            <li><a href="#">list2</a></li>
+            <li><a href="#">list3</a></li>
+            <li><a href="#">list4</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

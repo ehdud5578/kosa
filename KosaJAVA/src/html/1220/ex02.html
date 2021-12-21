@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function cart(){
+            var con = confirm("장바구니로 이동하시겠습니까?");
+            if(con){
+                location.href("https://www.naver.com");
+            }
+        }
+        function conf(){
+            var con = confirm("탈퇴하시겠습니까?");
+            if(con){
+                alert("탈퇴 되었습니다.");
+            }
+        }
+        function btn(){
+            var cnt = 10;
+            var msg = document.getElementById("count");
+            var interval = setInterval(function(){
+               cnt--;
+               msg.innerHTML = cnt;
+            },1000);
+            setTimeout(function (){
+                alert("페이지를 이동합니다.");
+                location.href="https://www.naver.com";
+                clearInterval(interval);
+            },10000)
+        }
+    </script>
+</head>
+<body>
+청바지 <br/>
+가격 : 5000원 <br/>
+<button type="button" onclick="cart()">장바구니</button>
+회원수정 <br/>
+<button type="button" onclick="conf()">회원탈퇴</button>
+<h3><span id="count">10</span>초 후에 이동을 합니다.</h3>
+<button type="button" onclick="btn()">버튼</button>
+</body>
+</html>

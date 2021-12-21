@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn1").click(function () {
+                $("#list1 li:odd").css("background", "yellow");
+            });
+            $("#btn2").click(function () {
+                $("#list1 li:even").css("background", "gray");
+            });
+            $("#btn3").click(function () {
+                $("#list1 li:first").css("color", "red");
+            });
+            $("#btn4").click(function () {
+                $("#list1 li:last").css("color", "green");
+            });
+            $("#btn5").click(function () {
+                $("#list1 li").eq(1).css("font-style", "italic");
+            });
+            $("#btn6").click(function () {
+                $("#list1 li:lt(3)").css("border", "2px solid aqua");
+            });
+            $("#btn7").click(function () {
+                $("#list1 li:gt(3)").css("border", "2px solid purple");
+            });
+            $("#btn8").click(function () {
+                $("#list1 li:nth-child(2n)").css("background", "orange");
+            });
+            $("#btn9").click(function (){
+                $("#list1 li:contains('list11')").css("color","red");
+            });
+            $("#btn10").click(function (){
+                // $("#list1 li:has('span')").css("color","green");
+                //$("#list1 li").find("span").css("color","green");
+                // 둘의 기능이 같음.
+                $("#list1 li").filter("span").css("color","green");
+            });
+
+        });
+
+
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <h2>탐색 선택자</h2>
+    <ul id="list1">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+        <li>list5</li>
+        <li>list6</li>
+        <li>list7</li>
+        <li class="theObj">list8</li>
+        <li><span>list9</span></li>
+        <li>list10</li>
+        <li>list11</li>
+        <li>list12</li>
+        <li>list13</li>
+        <li>list14</li>
+
+    </ul>
+    <button type="button" id="btn1">button1</button>
+    <button type="button" id="btn2">button2</button>
+    <button type="button" id="btn3">button3</button>
+    <button type="button" id="btn4">button4</button>
+    <button type="button" id="btn5">button5</button>
+    <button type="button" id="btn6">button6</button>
+    <button type="button" id="btn7">button7</button>
+    <button type="button" id="btn8">button8</button>
+    <button type="button" id="btn9">button9</button>
+    <button type="button" id="btn10">button10</button>
+    <button type="button" id="btn11">button11</button>
+    <button type="button" id="btn12">button12</button>
+    <button type="button" id="btn13">button13</button>
+</div>
+</body>
+</html>

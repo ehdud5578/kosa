@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn7").click(function(){
+                $(this).parent().next().fadeOut(1000);
+            });
+            $("#btn8").click(function(){
+                $(this).parent().next().fadeIn(1000);
+            });
+            $("#btn9").click(function(){
+                $(this).parent().next().fadeToggle(1000);
+            });
+            $("#btn10").click(function(){
+                $(this).parent().next().fadeTo("slow",0.3);
+            });
+            $("#btn11").click(function(){
+                $(this).parent().next().fadeTo("slow",1);
+            });
+        });
+    </script>
+</head>
+<body>
+<p>
+    <button id="btn7">button7</button>
+    <button id="btn8">button8</button>
+    <button id="btn9">button9</button>
+    <button id="btn10">button10</button>
+    <button id="btn11">button11</button>
+</p>
+<p>
+    asdf asdf asdf asdf asdf asdf asdf asdf asdf
+</p>
+</body>
+</html>

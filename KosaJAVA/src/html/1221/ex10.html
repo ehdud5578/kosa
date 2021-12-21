@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("#appd").append('<tr>\n' +
+                    '            <td><input type="text" size="6" name="userName"></td>\n' +
+                    '            <td><input type="text" size="15" name="userPhone"></td>\n' +
+                    '            <td><button type="button" name="btn1" onclick="del()">삭제</button></td>\n' +
+                    '        </tr>');
+            });
+            $(":button[name=btn1]").click(function () {
+                $(this).parent().parent().remove();
+            });
+        });
+        function del(){
+            $(":button[name=btn1]").click(function () {
+                $(this).parent().parent().remove();
+            });
+        }
+    </script>
+</head>
+<body>
+<form name="form" action="#">
+    <table id="appd">
+        <tr>
+            <th>이름</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <td><input type="text" size="6" name="userName"></td>
+            <td><input type="text" size="15" name="userPhone"></td>
+            <td>
+                <button type="button" id="btn">추가</button>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" size="6" name="userName"></td>
+            <td><input type="text" size="15" name="userPhone"></td>
+            <td><button type="button" name="btn1" onclick="del()">삭제</button></td>
+        </tr>
+        <tr>
+            <td><input type="text" size="6" name="userName"></td>
+            <td><input type="text" size="15" name="userPhone"></td>
+            <td><button type="button" name="btn1">삭제</button></td>
+        </tr>
+        <tr>
+            <td><input type="text" size="6" name="userName"></td>
+            <td><input type="text" size="15" name="userPhone"></td>
+            <td><button type="button" name="btn1">삭제</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

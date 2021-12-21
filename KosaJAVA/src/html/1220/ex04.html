@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $("#firstTitle").css("color", "red");
+            });
+            $("#btn2").click(function () {
+                $(".nextTitle").css("font-size", "12px");
+            });
+            $("#btn3").click(function () {
+                $(".obj3 > li").css("font-weight", "bold");
+            });
+            $("#btn").click(function () {
+                $("h1").css("color", "blue");
+            });
+            $("#btn4").click(function () {
+                $(".obj3 > .theObj1").css("color", "purple");
+            });
+            $("#btn5").click(function () {
+                $(".obj3").children(".theObj2").css("color", "aqua");
+            });
+            $("#btn6").click(function () {
+                $(".obj5").parent().css("border","2px solid #f00");
+            });
+            $("#btn7").click(function () {
+                $(".obj4").next().css("color","orange");
+            });
+            $("#btn8").click(function () {
+                $(".obj4").prev().css("text-align","right");
+            });
+            $("#btn9").click(function () {
+                $(".obj6").siblings("li").css("text-align","center");
+            });
+            $("#btn10").click(function (){
+                $(":text").css("background","#ccc");
+            });
+            $("#btn11").click(function (){
+                // $("input[type=checkbox][checked=checked]").css("background","red");
+                if($("input:checkbox[id='chk']").is(":checked")===true){
+                    $("input:checkbox[name='chk']").prop("checked",false);
+                }else{
+                    $("input:checkbox[name='chk']").prop("checked",true);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <h1>jQuery</h1>
+    <button type="button" id="btn">btn</button>
+    <h2 id="firstTitle">선택자</h2>
+    <button type="button" id="btn1">버튼1</button>
+    <h3 class="nextTitle">선택자2</h3>
+    <button type="button" id="btn2">버튼2</button>
+    <ul class="obj3">
+        <li class="theObj1">list 1</li>
+        <li class="theObj2">list 2</li>
+        <li>list 3</li>
+    </ul>
+    <button type="button" id="btn3">button 3</button>
+    <button type="button" id="btn4">button 4</button>
+    <button type="button" id="btn5">button 5</button>
+    <ul>
+        <li>list 7</li>
+        <li class="obj5">list 8</li>
+        <li>list 9</li>
+    </ul>
+    <button type="button" id="btn6">button 6</button>
+    <ul>
+        <li>list 4</li>
+        <li class="obj4">list 5</li>
+        <li>list 6</li>
+    </ul>
+    <button type="button" id="btn7">button 7</button>
+    <button type="button" id="btn8">button 8</button>
+    <ul>
+        <li>list 1</li>
+        <li class="obj6">list 2</li>
+        <li>list 3</li>
+    </ul>
+    <button type="button" id="btn9">button 9</button>
+    <input type="text" id="userName" name="userName">
+    <button type="button" id="btn10">button 10</button><br/>
+    <input type="checkbox" id="chk" name="chk" checked="checked">
+    <button type="button" id="btn11">button 11</button>
+</div>
+</body>
+</html>
